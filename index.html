@@ -9,6 +9,7 @@
     <h1>NIKASURG profiliniu galerije</h1>
     <div id="paveiksliukai"></div>
     <script>
+      // nevoktas kodas :D
       document.addEventListener("DOMContentLoaded", () => {
         let imagePaths = [];
         const vardai = [
@@ -16,6 +17,7 @@
           "agresyvus",
           "baisus",
           "draugiskas_velniukstis",
+          "draugiskas_velniukstis_aukstin",
           "pixels",
           "velniūkštis",
         ];
@@ -30,8 +32,7 @@
         }
 
         const imageContainer = document.getElementById("paveiksliukai");
-
-        // Iteruokite per paveikslėlių adresus ir sukurti img elementus
+        //voktas kodas /:
         imagePaths.forEach((imagePath) => {
           const imgElement = document.createElement("img");
           imgElement.src = imagePath;
@@ -39,6 +40,7 @@
           imageContainer.appendChild(imgElement);
         });
       });
+      ///////
     </script>
   </body>
 </html>
