@@ -1,11 +1,44 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    <h1>Pradžia discord profiliniu</h1>
-</body>
+  </head>
+  <body>
+    <h1>NIKASURG profiliniu galerije</h1>
+    <div id="paveiksliukai"></div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        let imagePaths = [];
+        const vardai = [
+          "3dvelniukštis",
+          "agresyvus",
+          "baisus",
+          "draugiskas_velniukstis",
+          "pixels",
+          "velniūkštis",
+        ];
+
+        function idekpaveiksliuka(vardas) {
+          nuoroda = "paveiksliukai/" + vardas + ".png";
+
+          return nuoroda;
+        }
+        for (let i = 0; i < vardai.length; i++) {
+          imagePaths.push(idekpaveiksliuka(vardai[i]));
+        }
+
+        const imageContainer = document.getElementById("paveiksliukai");
+
+        // Iteruokite per paveikslėlių adresus ir sukurti img elementus
+        imagePaths.forEach((imagePath) => {
+          const imgElement = document.createElement("img");
+          imgElement.src = imagePath;
+          imgElement.alt = "Paveikslėlis";
+          imageContainer.appendChild(imgElement);
+        });
+      });
+    </script>
+  </body>
 </html>
