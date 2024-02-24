@@ -14,15 +14,22 @@
       }
       h1 {
         color: rgb(184, 196, 196);
-        position: relative;
-        margin: auto;
-        width: 55%;
-        padding: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
       img {
-        width: 500px;
-        height: 500px;
+        width: 40vw;
+        height: 40vw;
+        border: 8px solid rgb(49, 47, 47);
+        /* margin-top: 10%; Pavyzdžiui, 10 pikselių nuo viršaus krašto */
+        margin-left: 25vw;
       }
+      
+      /* img:hover{
+        width: 200px;
+        height: 200px;
+      } */
     </style>
     <script>
       // nevoktas kodas :D
@@ -37,7 +44,7 @@
           "pixels",
           "velniūkštis",
           "spigliotaszales",
-          'melinas'
+          "melinas",
         ];
 
         function idekpaveiksliuka(vardas) {
