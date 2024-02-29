@@ -1,5 +1,4 @@
-<!-- <!DOCTYPE html> -->
-<html lang="en">
+<html lang="lt">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,119 +6,12 @@
   </head>
   <body>
     <!-- <canvas id="poperius"></canvas> -->
-    <!-- <button onclick="game()" id="gamebtn">pabėk nuo NIKASURG</button> -->
-    <div id="paveiksliukai"><h1>NIKASURG profiliniu galerije</h1></div>
-    <style>
-      body {
-        background-color: rgb(37, 37, 37);
-      }
-      #poperius {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 1;
-      }
-      div {
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, 0%);
-        padding: 10px;
-        overflow: hidden;
-      }
-      h1 {
-        color: rgb(184, 196, 196);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      img {
-        width: 40vw;
-        height: 40vw;
-        border: 8px solid rgb(49, 47, 47);
-        filter: blur(10px);
-        /* margin-top: 10px */
-        transition: filter 0.3s ease-in-out;
-      }
-      img:hover,
-      img:active {
-        filter: blur(0);
-      }
-      button {
-        color: rgb(189, 171, 156);
 
-        background-color: rgb(70, 66, 66);
-        border: 8px solid rgb(49, 47, 47);
-        /* filter: blur(0.5px); */
-      }
-      button:hover {
-        background-color: rgb(37, 36, 36);
-        border: 8px solid rgb(27, 26, 26);
-      }
-
-      /* img:hover{
-        width: 200px;
-        height: 200px;
-      } */
-    </style>
-    <script>
-      class humanas {
-        x = 0;
-        y = 0;
-      }
-      const imageContainer = document.getElementById("paveiksliukai");
-      let gameon = false;
-      function game() {
-        gameon = !gameon;
-        if (!gameon) {
-          imageContainer.style.display = "";
-        } else {
-          imageContainer.style.display = "none";
-        }
-      }
-
-      // nevoktas kodas :D
-      document.addEventListener("DOMContentLoaded", () => {
-        let imagePaths = [];
-        const vardai = [
-          "3dvelniukštis",
-          "agresyvus",
-          "baisus",
-          "draugiskas_velniukstis",
-          "draugiskas_velniukstis_aukstin",
-          "pixels",
-          "velniūkštis",
-          "spigliotaszales",
-          "melinas",
-          "megaboss",
-          "ranka",
-          "minecraftvel",
-          "tekstas",
-        ];
-
-        function idekpaveiksliuka(vardas) {
-          nuoroda = "paveiksliukai/" + vardas + ".png";
-
-          return nuoroda;
-        }
-        for (let i = 0; i < vardai.length; i++) {
-          imagePaths.push(idekpaveiksliuka(vardai[i]));
-        }
-
-        //voktas kodas /:
-        imagePaths.forEach((imagePath) => {
-          const imgElement = document.createElement("img");
-          imgElement.src = imagePath;
-          imgElement.alt = "Paveikslėlis";
-          imageContainer.appendChild(imgElement);
-        });
-        function ratas() {
-          requestAnimationFrame(ratas);
-        }
-        ratas();
-      });
-      ///////
-    </script>
+    <div id="paveiksliukai">
+      <h1>NIKASURG profiliniu galerije</h1>
+      <!-- <button onclick="game()" id="gamebtn">pabėk nuo NIKASURG</button> -->
+    </div>
+    <link rel="stylesheet" href="dizainas.css">
+    <script src="magic.js"></script>
   </body>
 </html>
